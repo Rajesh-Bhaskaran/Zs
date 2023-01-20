@@ -1,0 +1,19 @@
+package evaluation_1;
+
+public class Count_Each_Chracter {
+
+	public static void main(String[] args) {
+		String input="Hello World Please".toLowerCase();
+		String reference="Help".toLowerCase();
+		for(int i=0;i<reference.length();i++) {
+			int count=0;
+			for(int j=0;j<input.length();j++) {
+				if(reference.charAt(i)==input.charAt(j))
+					count++;
+			}
+			System.out.print(reference.charAt(i)+":"+count+" ");
+		}
+
+	}
+
+}
