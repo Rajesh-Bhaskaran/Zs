@@ -1,0 +1,28 @@
+package evaluation_1;
+
+public class Denomination {
+
+	public static void main(String[] args) {
+		int total_amount=500;
+		int [] arr= {1,2,5,10,20,50,100};
+		for(int i=arr.length-1;i>=0;i--) {
+			if(total_amount<arr[i]) continue;
+			else {
+				int count=total_amount/arr[i];
+				if(total_amount==count*arr[i])
+				{
+					System.out.println(arr[i]+" "+count);
+					break;
+				}
+				else {
+					System.out.println(arr[i]+" "+count);
+					total_amount=total_amount-count*arr[i];
+				}
+			}
+		}
+		if(total_amount<0)
+			System.out.println("-1");
+
+	}
+
+}
