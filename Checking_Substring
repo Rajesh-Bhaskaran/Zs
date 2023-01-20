@@ -1,0 +1,26 @@
+package evaluation_1;
+
+public class Checking_Substring {
+
+	public static void main(String[] args) {
+		String [] arr= {"ceo","alco","caaeio","ceai"};
+		String [] arr1= {"ec","oc","ceo"};
+		int count=0;
+		int total_count=0;
+		for(int i=0;i<arr.length;i++) {
+			total_count=0;
+			for(int j=0;j<arr1.length;j++) {
+				count=0;
+				for(int k=0;k<arr1[j].length();k++) {
+					if(arr[i].contains(""+arr1[j].charAt(k)))
+						count++;
+				}
+				if(count==arr1[j].length()) total_count++;
+			}
+			if(total_count==arr1.length)
+				System.out.println(arr[i]);
+		}
+
+	}
+
+}
